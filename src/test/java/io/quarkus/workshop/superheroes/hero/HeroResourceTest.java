@@ -53,12 +53,12 @@ public class HeroResourceTest extends HeroTestBase {
 
     @BeforeAll
     private static void configure() {
-        System.setProperty("quarkus.datasource.url", DATABASE.getJdbcUrl());
+        System.setProperty("quarkus.datasource.jdbc.url", DATABASE.getJdbcUrl());
     }
 
     @AfterAll
     private static void cleanup() {
-        System.clearProperty("quarkus.datasource.url");
+        System.clearProperty("quarkus.datasource.jdbc.url");
     }
 
     // tag::adocOpenAPI[]

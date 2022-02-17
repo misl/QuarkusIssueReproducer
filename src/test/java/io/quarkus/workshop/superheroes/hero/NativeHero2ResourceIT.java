@@ -4,7 +4,7 @@ package io.quarkus.workshop.superheroes.hero;
 import com.github.dockerjava.api.model.ExposedPort;
 import com.github.dockerjava.api.model.PortBinding;
 import com.github.dockerjava.api.model.Ports;
-import io.quarkus.test.junit.SubstrateTest;
+import io.quarkus.test.junit.QuarkusIntegrationTest;
 import io.restassured.common.mapper.TypeRef;
 import io.vertx.core.json.JsonObject;
 import org.hamcrest.core.Is;
@@ -30,7 +30,7 @@ import static javax.ws.rs.core.Response.Status.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.jupiter.api.Assertions.*;
 
-@SubstrateTest
+@QuarkusIntegrationTest
 @Testcontainers
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class NativeHero2ResourceIT {
